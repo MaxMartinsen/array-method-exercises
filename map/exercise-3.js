@@ -36,6 +36,6 @@ const buttonElements = buttons.map((button) => {
   const btnElement = document.createElement("button");
   btnElement.innerText = button.text;
   return btnElement;
-}); // Replace null and add .map code here
+});
 
 console.log(buttonElements);
