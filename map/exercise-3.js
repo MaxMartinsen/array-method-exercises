@@ -22,16 +22,20 @@ https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 
 const buttons = [
   {
-    text: 'Button Text 1',
+    text: "Button Text 1",
   },
   {
-    text: 'Button Text 2',
+    text: "Button Text 2",
   },
   {
-    text: 'Button Text 3',
+    text: "Button Text 3",
   },
 ];
 
-const buttonElements = null; // Replace null and add .map code here
+const buttonElements = buttons.map((button) => {
+  const btnElement = document.createElement("button");
+  btnElement.innerText = button.text;
+  return btnElement;
+}); // Replace null and add .map code here
 
 console.log(buttonElements);
