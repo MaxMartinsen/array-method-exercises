@@ -33,6 +33,10 @@ const people = [
   },
 ];
 
-const foundPerson = null; // Replace null and add .map code here
+const foundPerson = people.find((person) => {
+  if (person.id === 1) {
+    return true;
+  }
+}); // Replace null and add .map code here
 
-console.log(foundPerson);
+console.log("Find Person:", foundPerson.firstName, foundPerson.lastName);
