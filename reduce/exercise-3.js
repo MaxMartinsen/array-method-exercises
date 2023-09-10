@@ -39,12 +39,11 @@ const teams = [
   },
 ];
 
-const winningTeams = teams.reduce((accumulator, currentTeam) => {
-  if (currentTeam.isWinner) {
-    accumulator[currentTeam.name.toLowerCase()] = currentTeam.score;
-  }
-  return accumulator;
-}, {});
+const winningTeams = teams.reduce((team, currentTeam) => {
+  if (currentTeam.isWinner === true) {
+    team[currentTeam.name.toLocaleLowerCase()] = currentTeam.score;
+  } return team;
+},{})
 
 
 
